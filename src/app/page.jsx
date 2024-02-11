@@ -6,12 +6,14 @@ import CategoryList from "@/components/categoryList/CategoryList";
 import Menu from "@/components/Menu/Menu";
 
 export default function Home() {
-  return <div className={styles.container}>
-    <Featured/>
-    <CategoryList/>
+  return (
     <div className={styles.container}>
-       <Cardlist/>
-       <Menu/>
+      <Featured />
+      <CategoryList />
+      <div className={styles.content}>
+        <Cardlist />
+        <Menu />
+      </div>
     </div>
-   </div>;
+  );
 }
