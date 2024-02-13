@@ -47,6 +47,7 @@ model User {
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
+  isAdmin       Boolean   @default(false) // Add isAdmin field with default value false
 }
 
 model VerificationToken {

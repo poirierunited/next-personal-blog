@@ -7,8 +7,18 @@ import { signOut, useSession } from "next-auth/react";
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
 
-  const { status } = useSession();
-  console.log(status);
+  const { data: session, status } = useSession();
+  // console.log(session);
+
+  // if (status === "loading") {
+  //   return <p>Loading...</p>;
+  // }
+
+  // Check if session data is available
+  const isAdmin =
+    status === "authenticated" &&
+    session?.user?.email === "ale.poirier16@gmail.com";
+  // console.log(isAdmin);
 
   return (
     <>
@@ -18,9 +28,11 @@ const AuthLinks = () => {
         </Link>
       ) : (
         <>
-          <Link href="/write" className={styles.link}>
-            Write
-          </Link>
+          {isAdmin && (
+            <Link href="/write" className={styles.link}>
+              Write
+            </Link>
+          )}
           <span className={styles.link} onClick={signOut}>
             Logout
           </span>
