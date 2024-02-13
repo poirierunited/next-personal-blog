@@ -24,7 +24,9 @@ const Navbar = () => {
         <Image src="/tiktok.png" alt="tiktok logo " width={24} height={24} />
         <Image src="/youtube.png" alt="youtube logo " width={24} height={24} />
       </div>
-      <div className={styles.logo}>lamablog</div>
+      <div className={styles.logo}>
+        <Link href="/">GPA</Link>
+      </div>
       <div className={styles.links}>
         <ThemeToggle />
         <Link className={styles.link} href="/">

@@ -8,8 +8,10 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="lama blog" width={50} height={50} />
-          <h1 className={styles.logoText}>Lamablog</h1>
+          <Image src="/logo.png" alt="GPA blog" width={50} height={50} />
+          <Link href="/">
+            <h1 className={styles.logoText}>GPA</h1>
+          </Link>
         </div>
         <p className={styles.desc}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
